@@ -9,8 +9,17 @@ function App() {
     <div className="app">
       Trivia!
       <Question text={data[0].question.text} />
+      <Answer answer={3} />
+      <NextQuestion />
     </div>
   );
+}
+function NextQuestion(props) {
+  return <button onClick={props.goToNextQuestion}> Next Question </button>;
+}
+
+function Answer(props) {
+  return <div> {props.answer} </div>;
 }
 
 export default App;
